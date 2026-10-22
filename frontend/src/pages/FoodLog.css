@@ -1,0 +1,286 @@
+.food-log-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Date Navigator */
+.date-nav-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.date-picker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-input {
+  background: var(--card-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.date-input:focus {
+  border-color: var(--primary);
+}
+
+.today-pill {
+  font-size: 0.75rem;
+  background: rgba(245, 165, 36, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(245, 165, 36, 0.3);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+/* Totals Ribbon */
+.totals-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ribbon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ribbon-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.ribbon-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.ribbon-val small {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.ribbon-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border-subtle);
+}
+
+/* Grid */
+.food-log-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.log-form-card {
+  padding: 24px;
+}
+
+.log-card-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.log-card-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.form-alert-error {
+  padding: 8px 12px;
+  background: rgba(218, 54, 51, 0.15);
+  border: 1px solid rgba(218, 54, 51, 0.4);
+  color: #ff7b72;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  margin-bottom: 14px;
+}
+
+/* Custom fields box */
+.custom-fields-box {
+  background: var(--card-surface);
+  border: 1px dashed rgba(245, 165, 36, 0.4);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.custom-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(245, 165, 36, 0.2);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.custom-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.custom-inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Entries List */
+.log-entries-card {
+  padding: 24px;
+}
+
+.entries-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  min-width: 200px;
+}
+
+.search-input {
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.meal-group-block {
+  background: var(--card-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.meal-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.meal-group-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.meal-group-cals {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.group-items-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.15s ease;
+}
+
+.entry-row:last-child {
+  border-bottom: none;
+}
+
+.entry-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.entry-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entry-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.entry-qty {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.entry-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.btn-delete-entry {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-entry:hover {
+  color: var(--error);
+  background: rgba(218, 54, 51, 0.1);
+}
+
+@media (max-width: 900px) {
+  .food-log-grid {
+    grid-template-columns: 1fr;
+  }
+}

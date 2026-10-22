@@ -1,0 +1,228 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-quick-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-heading {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--card-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.card-action-link {
+  font-size: 0.86rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.card-subtitle-small {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Ring Sub-Metrics */
+.ring-sub-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sub-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-metric-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sub-metric-lbl {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.sub-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-subtle);
+}
+
+/* Macros */
+.macros-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.macro-legend-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  text-align: right;
+}
+
+/* Water Tracker */
+.water-glasses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 12px 0 20px 0;
+}
+
+.water-glass-btn {
+  background: var(--card-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 14px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.water-glass-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 139, 253, 0.4);
+  background: rgba(56, 139, 253, 0.08);
+}
+
+.glass-emoji {
+  font-size: 1.5rem;
+}
+
+.water-glass-btn.glass-filled {
+  background: rgba(18, 128, 111, 0.18);
+  border-color: rgba(18, 128, 111, 0.5);
+  box-shadow: 0 4px 12px rgba(18, 128, 111, 0.2);
+}
+
+.water-card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Meals summary */
+.meals-summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meal-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--card-surface);
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+}
+
+.meal-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meal-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.meal-row-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: block;
+}
+
+.meal-row-items {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.meal-row-kcal {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.meal-row-kcal small {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* 7-Day Trend */
+.trend-card {
+  grid-column: 1 / -1;
+  min-height: 320px;
+}
+
+.trend-chart-wrapper {
+  height: 250px;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
